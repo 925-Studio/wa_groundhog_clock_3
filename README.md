@@ -1,15 +1,15 @@
-# 📦 webpack 5 Boilerplate
+# 🕰️ Groundhog Clock
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Sensible webpack 5 boilerplate using Babel, PostCSS and Sass.
+An intelligent clock inspired by the movie Groundhog Day 1993.
 
 ## Installation
 
 Clone this repo...
 
 ```zsh
-git clone https://github.com/925-Studio/boilerplate-webpack-5.git
+git clone https://github.com/925-Studio/wa_groundhog_clock_3.git
 ```
 
 then install.
@@ -96,11 +96,7 @@ cd dist && http-server
 
 ## Author
 
-- [Tania Rascia](https://www.taniarascia.com)
-
-## Maintainer
-
-- Silver Von
+- [925 Studio](https://github.com/925-Studio)
 
 ## License
 
