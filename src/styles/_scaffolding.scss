@@ -1,0 +1,30 @@
+/* --------------------------------- GLOBAL --------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  user-select: none;
+}
+
+* :focus {
+  outline: none !important;
+}
+
+/* ---------------------------------- BLOCK --------------------------------- */
+body {
+  display: block;
+  overflow: hidden;
+
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: $background-color;
+}
+
+// css variables
+//--display-value: none
+//--opacity-value: 0

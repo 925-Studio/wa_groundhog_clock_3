@@ -1,0 +1,13 @@
+.neon-texts-frame {
+  @media only screen and (max-width: 767px) {
+    width: 200px;
+    height: 200px;
+    background-color: $font-color;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    width: 80%;
+    height: 200px;
+    background-color: blue;
+  }
+}

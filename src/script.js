@@ -1,4 +1,4 @@
-import '@/styles/style.sass'
+import 'style.scss'
 import { neonTexts } from '@/modules/_index'
 
 
