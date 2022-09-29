@@ -1,0 +1,27 @@
+.theme_control_wrapper {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 24px;
+  height: 24px;
+}
+
+.theme_switch {
+  appearance: none;
+
+  position: fixed;
+  z-index: 2;
+  top: 8px;
+  right: 8px;
+
+  width: inherit;
+  height: inherit;
+
+  cursor: pointer;
+}
+
+.theme_icon {
+  width: inherit;
+  width: inherit;
+}

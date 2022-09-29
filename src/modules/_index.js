@@ -1,3 +1,5 @@
+import themeControl from './themeControl.js'
 import neonTexts from './neonTexts.js'
 
-export { neonTexts }
+
+export { themeControl, neonTexts }

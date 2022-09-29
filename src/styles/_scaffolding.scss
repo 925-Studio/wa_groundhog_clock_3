@@ -23,7 +23,20 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: $background-color;
+
+  color: var(--color-text);
+  // background: var(--color-background);
 }
+
+/* ---------------------------------- THEME --------------------------------- */
+// Light Theme
+$light-theme-background: #fff;
+$light-theme-text: #000;
+
+// Dark Theme
+$dark-theme-background: #000;
+$dark-theme-text: #fff;
+
 
 // css variables
 //--display-value: none
