@@ -1,27 +1,52 @@
 .theme_control_wrapper {
   position: absolute;
-  top: 8px;
-  right: 8px;
 
-  width: 24px;
-  height: 24px;
+  @media only screen and (max-width: 767px) {
+    top: 8px;
+    right: 8px;
+
+    width: 20px;
+    height: 20px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    top: 20px;
+    right: 20px;
+
+    width: 32px;
+    height: 32px;
+  }
+
+  border-radius: 50%;
+  background-color: var(--icon-c);
+
+  transition-property: background;
+  transition: 100ms ease-in-out;
+
+  &::before {
+    position: absolute;
+    top: var(--icon-p-top);
+    left: var(--icon-p-left);
+
+    content: '';
+
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background-color: var(--icon-mask-c);
+
+    transition-property: top, left;
+    transition: 333ms ease-in-out;
+  }
 }
 
 .theme_switch {
   appearance: none;
 
-  position: fixed;
-  z-index: 2;
-  top: 8px;
-  right: 8px;
+  position: inherit;
 
   width: inherit;
   height: inherit;
 
   cursor: pointer;
-}
-
-.theme_icon {
-  width: inherit;
-  width: inherit;
 }

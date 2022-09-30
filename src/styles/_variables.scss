@@ -1,5 +1,25 @@
-$font-size: 1rem;
-$font-family: 'Inter', sans-serif;
-$background-color: #333;
-$font-color: #bad522;
-$page-width: 650px;
+// Light Theme
+html[theme='light'] {
+  --background-c: #fffcf2;
+  --text-c: #252422;
+  --icon-c: #252422;
+  --icon-mask-c: #fffcf2;
+  @media only screen and (max-width: 767px) {
+    --icon-p-left: -6px;
+    --icon-p-top: -6px;
+  }
+  @media only screen and (min-width: 768px) {
+    --icon-p-left: -10px;
+    --icon-p-top: -10px;
+  }
+}
+
+// Dark Theme
+html[theme='dark'] {
+  --background-c: #252422;
+  --text-c: #fffcf2;
+  --icon-c: #fffcf2;
+  --icon-mask-c: #fffcf2;
+  --icon-p-left: 0px;
+  --icon-p-top: 0px;
+}
