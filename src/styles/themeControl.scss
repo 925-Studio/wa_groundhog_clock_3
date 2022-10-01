@@ -1,14 +1,14 @@
-.theme_control_wrapper {
-  position: absolute;
+.theme_switch {
+  appearance: none;
 
+  position: absolute;
   @media only screen and (max-width: 767px) {
-    top: 8px;
-    right: 8px;
+    top: 16px;
+    right: 16px;
 
     width: 20px;
     height: 20px;
   }
-
   @media only screen and (min-width: 768px) {
     top: 20px;
     right: 20px;
@@ -19,9 +19,6 @@
 
   border-radius: 50%;
   background-color: var(--icon-c);
-
-  transition-property: background;
-  transition: 100ms ease-in-out;
 
   &::before {
     position: absolute;
@@ -35,18 +32,8 @@
     border-radius: inherit;
     background-color: var(--icon-mask-c);
 
-    transition-property: top, left;
-    transition: 333ms ease-in-out;
+    transition: 333ms ease-in-out 66ms;
   }
-}
-
-.theme_switch {
-  appearance: none;
-
-  position: inherit;
-
-  width: inherit;
-  height: inherit;
 
   cursor: pointer;
 }
