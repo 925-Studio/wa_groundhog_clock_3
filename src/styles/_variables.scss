@@ -1,3 +1,4 @@
+/* ---------------------------------- THEME --------------------------------- */
 // Light Theme
 html[theme='light'] {
   --background-c: #fffcf2;
@@ -23,3 +24,17 @@ html[theme='dark'] {
   --icon-p-left: 0px;
   --icon-p-top: 0px;
 }
+
+/* --------------------------------- GLOBAL --------------------------------- */
+// Fonts
+@font-face {
+  font-family: 'Sounso-Moon';
+  src: url('../assets/fonts/Sounso-Moon.ttf');
+}
+
+@font-face {
+  font-family: 'JianYuan';
+  src: url('../assets/fonts/JianYuan.ttf');
+}
+
+$font-families: 'Sounso-Moon', 'JianYuan';

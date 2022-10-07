@@ -10,7 +10,7 @@ app.append(themeControl(), neonTexts())
 // Test import of a JavaScript module
 
 // Test import of an asset
-import webpackLogo from '../assets/images/webpack-logo.svg'
+// import webpackLogo from '../assets/images/webpack-logo.svg'
 
 // Test import of styles
 
