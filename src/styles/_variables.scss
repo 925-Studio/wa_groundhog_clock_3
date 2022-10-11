@@ -1,28 +1,40 @@
 /* ---------------------------------- THEME --------------------------------- */
 // Light Theme
 html[theme='light'] {
-  --background-c: #fffcf2;
-  --text-c: #252422;
+  --c-primary: #fffcf2;
+  --c-secondary: #e6e3da;
+  // --c-accent: #eb5e28
+  --c-text: #252422;
   --icon-c: #252422;
   --icon-mask-c: #fffcf2;
+  --icon-p-left: -10px;
+  --icon-p-top: -10px;
+
+  --button-icon-clock: url("../assets/images/icon-clock-black.svg");
+  --button-icon-timer: url("../assets/images/icon-timer-black.svg");
+  --button-icon-alarm: url("../assets/images/icon-alarm-black.svg");
+  --button-icon-settings: url("../assets/images/icon-settings-black.svg");
+
   @media only screen and (max-width: 767px) {
     --icon-p-left: -6px;
     --icon-p-top: -6px;
-  }
-  @media only screen and (min-width: 768px) {
-    --icon-p-left: -10px;
-    --icon-p-top: -10px;
   }
 }
 
 // Dark Theme
 html[theme='dark'] {
-  --background-c: #252422;
-  --text-c: #fffcf2;
+  --c-primary: #252422;
+  --c-secondary: #403d39;
+  --c-text: #fffcf2;
   --icon-c: #252422;
   --icon-mask-c: #fffcf2;
   --icon-p-left: 0px;
   --icon-p-top: 0px;
+
+  --button-icon-clock: url("../assets/images/icon-clock-white.svg");
+  --button-icon-timer: url("../assets/images/icon-timer-white.svg");
+  --button-icon-alarm: url("../assets/images/icon-alarm-white.svg");
+  --button-icon-settings: url("../assets/images/icon-settings-white.svg");
 }
 
 /* --------------------------------- GLOBAL --------------------------------- */
@@ -37,4 +49,5 @@ html[theme='dark'] {
   src: url('../assets/fonts/JianYuan.ttf');
 }
 
-$font-families: 'Sounso-Moon', 'JianYuan';
+$title-families: 'Sounso-Moon', 'JianYuan';
+$title-size: 8em;

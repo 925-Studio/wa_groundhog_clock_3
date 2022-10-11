@@ -13,18 +13,15 @@
   outline: none !important;
 }
 
-/* ---------------------------------- BLOCK --------------------------------- */
-body {
-  display: block;
+/* ---------------------------------- #ROOT --------------------------------- */
+#root {
   overflow: hidden;
-
   position: relative;
 
-  width: 100vw;
-  height: 100vh;
+  width: inherit;
+  height: inherit;
+  background-color: var(--c-primary);
+  color: var(--c-text);
 
-  color: var(--text-c);
-  background-color: var(--background-c);
-  
-  transition: 333ms ease-in-out;
+  transition: background 333ms ease-in-out;
 }

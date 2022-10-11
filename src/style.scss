@@ -1,7 +1,12 @@
 @import './styles/variables';
 @import './styles/scaffolding';
 
-@import './styles/themeControl.scss';
-@import './styles/neonTexts';
+@import './styles/c_themeControl';
+@import './styles/c_screenTemplate';
+@import './styles/c_navbar';
+@import './styles/c_neonTexts';
+
+@import './styles/s_Settings';
+
 
 

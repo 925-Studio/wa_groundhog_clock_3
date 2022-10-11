@@ -1,0 +1,12 @@
+.screen-template {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  position: absolute;
+  left: 0;
+  top: 0;
+  
+  width: inherit;
+  height: 90%;
+}

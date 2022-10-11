@@ -1,0 +1,16 @@
+.neon-texts {
+  position: relative;
+  top: 20px;
+
+  width: 90vw;
+  font-family: $title-families;
+  font-size: $title-size;
+  text-align: center;
+  letter-spacing: 4px;
+  word-wrap: break-word;
+
+  @media only screen and (max-width: 767px) {
+    font-size: calc($title-size / 2.5);
+    line-height: 100%;
+  }
+}

@@ -1,10 +1,12 @@
 export default function themeControl() {
-  const themeSwitch = document.createElement('input')
+  const themeControl = document.createElement('input')
 
-  themeSwitch.type = 'checkbox'
-  themeSwitch.className = 'theme_switch'
+  themeControl.type = 'checkbox'
+  themeControl.className = 'theme_switch'
 
-  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  const themeMatch = window.matchMedia('(prefer-color-scheme: dark)').matches
+
+  if (themeMatch) {
     document.documentElement.setAttribute('theme', 'dark')
     themeSwitch.checked = true
   } else {
@@ -12,9 +14,9 @@ export default function themeControl() {
     themeSwitch.checked = false
   }
 
-  themeSwitch.addEventListener('change', (e) => {
+  themeControl.addEventListener('change', (e) => {
     document.documentElement.setAttribute('theme', e.target.checked ? 'dark' : 'light')
   })
 
-  return themeSwitch
+  return themeControl
 }

@@ -1,20 +1,20 @@
 .theme_switch {
   appearance: none;
+  cursor: pointer;
 
   position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 32px;
+  height: 32px;
+
   @media only screen and (max-width: 767px) {
     top: 16px;
     right: 16px;
 
     width: 20px;
     height: 20px;
-  }
-  @media only screen and (min-width: 768px) {
-    top: 20px;
-    right: 20px;
-
-    width: 32px;
-    height: 32px;
   }
 
   border-radius: 50%;
@@ -34,6 +34,4 @@
 
     transition: 333ms ease-in-out 66ms;
   }
-
-  cursor: pointer;
 }

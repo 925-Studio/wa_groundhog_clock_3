@@ -1,29 +1,67 @@
+/* --------------------------------- IMPORT --------------------------------- */
 import 'style.scss'
-import { themeControl, neonTexts } from '@/modules/_index'
+// Pages
+import { Clock, Timer, Alarm, Settings } from '@/modules/_index'
+// Components
+import { eventEmitter, navbar } from '@/modules/_index'
 
+/* ------------------------------- INITIALIZE ------------------------------- */
+// Theme
+const themeMatch = window.matchMedia('(prefer-color-scheme: dark)').matches
 
+if (themeMatch) {
+  document.documentElement.setAttribute('theme', 'dark')
+} else {
+  document.documentElement.setAttribute('theme', 'light')
+}
+
+// Language
+const localLanguageCode = navigator.language
+
+// Viewport Size
+const viewport = window.visualViewport
+
+fitViewport()
+
+// Get root element
 const app = document.querySelector('#root')
-app.append(themeControl(), neonTexts())
 
+/* -------------------------------- FUNCTION -------------------------------- */
+function fitViewport() {
+  document.body.style.width = viewport.width + 'px'
+  document.body.style.height = viewport.height + 'px'
+}
 
+function buildScene(s) {
+  switch (s) {
+    case 'CLOCK':
+      currentScreen = Clock()
+      break
+    case 'TIMER':
+      currentScreen = Timer()
+      break
+    case 'ALARM':
+      currentScreen = Alarm()
+      break
+    case 'SETTINGS':
+      currentScreen = Settings()
+      break
+    default:
+      break
+  }
 
-// Test import of a JavaScript module
+  app.firstElementChild.remove()
+  app.prepend(currentScreen)
+}
 
-// Test import of an asset
-// import webpackLogo from '../assets/images/webpack-logo.svg'
+/* ----------------------------------- DOM ---------------------------------- */
+let currentScreen = Settings()
 
-// Test import of styles
+app.append(currentScreen, navbar())
 
-// Appending to the DOM
-// const logo = document.createElement('img')
-// logo.src = webpackLogo
+/* --------------------------------- EVENTS --------------------------------- */
+eventEmitter.emit('check system language code', localLanguageCode)
+eventEmitter.on('navigate', (s) => buildScene(s))
 
-
-
-// Test a background image url in CSS
-// const imageBackground = document.createElement('div')
-// imageBackground.classList.add('image')
-
-// Test a assets folder file
-// const imageAssets = document.createElement('img')
-// imageAssets.src = 'assets/images/example.png'
+viewport.addEventListener('resize', fitViewport)
+viewport.addEventListener('orientationchange', fitViewport)

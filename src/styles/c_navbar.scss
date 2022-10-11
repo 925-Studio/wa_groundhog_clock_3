@@ -1,0 +1,58 @@
+.navbar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  width: 100%;
+  height: 10%;
+
+  .button {
+    all: unset;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 25%;
+    height: 100%;
+    background-color: var(--c-secondary);
+    opacity: 0.33;
+
+    img {
+      width: 33%;
+      height: 33%;
+      pointer-events: none;
+    }
+
+    .button-icon-clock {
+      content: var(--button-icon-clock);
+    }
+    .button-icon-timer {
+      content: var(--button-icon-timer);
+    }
+    .button-icon-alarm {
+      content: var(--button-icon-alarm);
+    }
+    .button-icon-settings {
+      content: var(--button-icon-settings);
+    }
+
+    p {
+      pointer-events: none;
+
+      margin-top: 4px;
+
+      font-family: system-ui;
+      font-size: 10px;
+    }
+  }
+
+  .activated {
+    opacity: 1;
+  }
+}
