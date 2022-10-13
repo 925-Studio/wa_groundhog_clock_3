@@ -4,14 +4,14 @@ export default function themeControl() {
   themeControl.type = 'checkbox'
   themeControl.className = 'theme_switch'
 
-  const themeMatch = window.matchMedia('(prefer-color-scheme: dark)').matches
+  const themeMatch = window.matchMedia('(prefers-color-scheme: dark)').matches
 
   if (themeMatch) {
     document.documentElement.setAttribute('theme', 'dark')
     themeSwitch.checked = true
   } else {
     document.documentElement.setAttribute('theme', 'light')
-    themeSwitch.checked = false
+    themeControl.checked = false
   }
 
   themeControl.addEventListener('change', (e) => {

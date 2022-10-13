@@ -1,16 +1,21 @@
 /* --------------------------------- IMPORT --------------------------------- */
 import { eventEmitter, themeControl, setLanguage, screen } from './_index'
 
+/* ----------------------------- INITIALIZATION ----------------------------- */
+const localLanguage = navigator.language.includes('zh') ? 'chinese' : 'english'
+
 /* -------------------------------- COMPONENT ------------------------------- */
 export default function Settings() {
-  // const text = setLanguage().settings
+  
+
+  const text = setLanguage(localLanguage).settings
 
   const settingsBlock = document.createElement('div')
   settingsBlock.className = 'settings-block'
 
   const blockTitle = document.createElement('h3')
   blockTitle.className = 'block-title'
-  // blockTitle.innerText = text.menu[2]
+  blockTitle.innerText = localLanguage
 
   settingsBlock.append(blockTitle)
 

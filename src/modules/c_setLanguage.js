@@ -1,9 +1,4 @@
-/* --------------------------------- IMPORT --------------------------------- */
-import eventEmitter from './c_eventEmitter'
-
 /* ------------------------------- VARIABLE(S) ------------------------------ */
-let defaultLanguage
-
 const languages = {
   chinese: {
     settings: {
@@ -29,33 +24,11 @@ const languages = {
   },
 }
 
-/* ------------------------------- FUNCTION(S) ------------------------------ */
-// Check default language
-
 /* ------------------------------ COMPONENT(S) ------------------------------ */
-export default function setLanguage() {
-  // language initialization
-  // let defaultLanguage
-
+export default function setLanguage(l) {
+  const language = languages[l]
   
+  return language
 }
 
 /* -------------------------------- EVENT(S) -------------------------------- */
-// const abc = 
-eventEmitter.on('local language', (localLanguage) => defaultLanguage = localLanguage)
-
-// console.log(defaultLanguage)
-
-
-
-
-// eventEmitter.on("local language", function(e) {
-//   e.message += " World";              // Modifying the state
-// });
-
-async function myDisplay() {
-  let myPromise = await defaultLanguage
-  console.log(myPromise)
-}
-
-myDisplay().then(alert);

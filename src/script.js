@@ -10,9 +10,7 @@ import { eventEmitter, navbar } from '@/modules/_index'
 
 /* ------------------------------- INITIALIZE ------------------------------- */
 // Theme
-const themeMatch = window.matchMedia('(prefer-color-scheme: dark)').matches
-
-if (themeMatch) {
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
   document.documentElement.setAttribute('theme', 'dark')
 } else {
   document.documentElement.setAttribute('theme', 'light')
@@ -22,9 +20,6 @@ if (themeMatch) {
 const viewport = window.visualViewport
 
 fitViewport()
-
-// Local Language
-const localLanguage = navigator.language === 'zh-cn' ? 'chinese' : 'english'
 
 // Get root element
 const app = document.querySelector('#root')
@@ -63,7 +58,6 @@ let currentScreen = Settings()
 app.append(currentScreen, navbar())
 
 /* --------------------------------- EVENTS --------------------------------- */
-eventEmitter.emit('local language', localLanguage)
 eventEmitter.on('navigate', (s) => chooseScreen(s))
 
 viewport.addEventListener('resize', fitViewport)
