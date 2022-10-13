@@ -1,7 +1,8 @@
 // Components
 import eventEmitter from './c_eventEmitter'
 import themeControl from './c_themeControl'
-import screenTemplate from './c_screenTemplate'
+import setLanguage from './c_setLanguage'
+import screen from './c_screen'
 import navbar from './c_navbar'
 import neonTexts from './c_neonTexts'
 
@@ -14,7 +15,8 @@ import Settings from './s_Settings'
 export {
   eventEmitter,
   themeControl,
-  screenTemplate,
+  setLanguage,
+  screen,
   navbar,
   neonTexts,
   Clock,

@@ -47,5 +47,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/925-Studio/wa_groundhog_clock_3.git"
+  },
+  "dependencies": {
+    "regenerator-runtime": "^0.13.9"
   }
 }

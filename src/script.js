@@ -1,6 +1,9 @@
 /* --------------------------------- IMPORT --------------------------------- */
+// Dependency
+import 'regenerator-runtime/runtime'
+// Style
 import 'style.scss'
-// Pages
+// Screens
 import { Clock, Timer, Alarm, Settings } from '@/modules/_index'
 // Components
 import { eventEmitter, navbar } from '@/modules/_index'
@@ -15,13 +18,13 @@ if (themeMatch) {
   document.documentElement.setAttribute('theme', 'light')
 }
 
-// Language
-const localLanguageCode = navigator.language
-
 // Viewport Size
 const viewport = window.visualViewport
 
 fitViewport()
+
+// Local Language
+const localLanguage = navigator.language === 'zh-cn' ? 'chinese' : 'english'
 
 // Get root element
 const app = document.querySelector('#root')
@@ -32,7 +35,7 @@ function fitViewport() {
   document.body.style.height = viewport.height + 'px'
 }
 
-function buildScene(s) {
+function chooseScreen(s) {
   switch (s) {
     case 'CLOCK':
       currentScreen = Clock()
@@ -60,8 +63,8 @@ let currentScreen = Settings()
 app.append(currentScreen, navbar())
 
 /* --------------------------------- EVENTS --------------------------------- */
-eventEmitter.emit('check system language code', localLanguageCode)
-eventEmitter.on('navigate', (s) => buildScene(s))
+eventEmitter.emit('local language', localLanguage)
+eventEmitter.on('navigate', (s) => chooseScreen(s))
 
 viewport.addEventListener('resize', fitViewport)
 viewport.addEventListener('orientationchange', fitViewport)

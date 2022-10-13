@@ -1,6 +1,7 @@
 /* --------------------------------- IMPORT --------------------------------- */
 import eventEmitter from './c_eventEmitter'
 
+/* -------------------------------- COMPONENT ------------------------------- */
 export default function navbar() {
   const navbar = document.createElement('div')
   navbar.className = 'navbar'
