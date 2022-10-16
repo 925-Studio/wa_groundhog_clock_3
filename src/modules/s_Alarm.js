@@ -1,6 +1,10 @@
 export default function Alarm() {
-  const alarm = document.createElement('h1')
-  alarm.innerText = 'ALARM'
+  const name = 'alarm'
 
-  return alarm
+  const screen = document.createElement('div')
+  screen.className = 'screen'
+  screen.innerText = 'ALARM'
+  
+
+  return {name, screen}
 }

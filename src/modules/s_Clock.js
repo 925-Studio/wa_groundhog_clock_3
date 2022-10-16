@@ -1,6 +1,10 @@
 export default function Clock() {
-  const clock = document.createElement('h1')
-  clock.innerText = 'CLOCK'
+  const name = 'clock'
 
-  return clock
+  const screen = document.createElement('div')
+  screen.className = 'screen'
+  screen.innerText = 'CLOCK'
+  
+
+  return {name, screen}
 }

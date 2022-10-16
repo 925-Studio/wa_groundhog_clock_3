@@ -1,6 +1,10 @@
 export default function Timer() {
-  const timer = document.createElement('h1')
-  timer.innerText = 'TIMER'
+  const name = 'timer'
 
-  return timer
+  const screen = document.createElement('div')
+  screen.className = 'screen'
+  screen.innerText = 'TIMER'
+  
+
+  return {name, screen}
 }

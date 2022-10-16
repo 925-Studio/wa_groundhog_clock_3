@@ -1,29 +1,28 @@
 /* --------------------------------- IMPORT --------------------------------- */
-import { eventEmitter, themeControl, setLanguage, screen } from './_index'
+import { eventEmitter, themeControl, languages } from './_index'
 
-/* ----------------------------- INITIALIZATION ----------------------------- */
-const localLanguage = navigator.language.includes('zh') ? 'chinese' : 'english'
+
 
 /* -------------------------------- COMPONENT ------------------------------- */
 export default function Settings() {
+  const name = 'settings'
+
+  const screen = document.createElement('div')
+  screen.className = 'screen'
+  screen.innerText = 'SETTINGS'
   
 
-  const text = setLanguage(localLanguage).settings
-
-  const settingsBlock = document.createElement('div')
-  settingsBlock.className = 'settings-block'
-
-  const blockTitle = document.createElement('h3')
-  blockTitle.className = 'block-title'
-  blockTitle.innerText = localLanguage
-
-  settingsBlock.append(blockTitle)
-
-  return screen([settingsBlock])
+  return {name, screen}
 }
 
-// pages ?
-// initialize local language
+const userSettings = {
+  language: '', // english/chinese
+  theme: '', // dark/light/auto
+  lastScreen: '', // screen name
+  AMandPM: undefined, // true/false
+  brokenLight: undefined // true/false
+}
+
 // settings screen layout
 // basic functions on settings screen
 // navbar language
